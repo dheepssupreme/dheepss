@@ -1,0 +1,24 @@
+.footer {
+  padding: 4rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerName {
+  font-size: 13px;
+  color: #888;
+}
+.footerTag {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #bbb;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}

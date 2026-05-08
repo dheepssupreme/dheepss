@@ -1,0 +1,436 @@
+/* ── Project Overview — centered ── */
+.projectOverview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4.5rem 2.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+.projectLogoWrap {
+  margin-bottom: 2rem;
+}
+.projectLogoWrap img {
+  width: 420px;
+  max-width: 90%;
+  display: block;
+}
+.projectTitle {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 1rem;
+}
+.projectDesc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 2rem;
+  font-style: italic;
+  max-width: 620px;
+}
+.repoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  font-size: 12px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-bottom: 2rem;
+}
+.repoLink:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+.repoLink svg {
+  width: 13px;
+  height: 13px;
+}
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+}
+.techTag {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #666;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: 'SF Mono', 'Courier New', monospace;
+}
+
+/* ── My Role — no bottom border so it merges with Cloud Arch ── */
+.roleSection {
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.roleNum {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #bbb;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.roleBadgeBig {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  white-space: nowrap;
+}
+.roleLabel {
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 0.3px;
+}
+.roleName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  letter-spacing: -0.2px;
+}
+.roleDesc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+}
+
+/* ── Cloud Architecture — left-aligned, no top border, smaller image ── */
+.archSection {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 2.5rem;
+}
+.archHeader {
+  padding: 0 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.archNum {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #bbb;
+  text-transform: uppercase;
+}
+.archTitle {
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+.archDesc {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+  padding: 0 2.5rem 1.5rem;
+  max-width: 580px;
+  font-style: italic;
+}
+.archImg {
+  display: block;
+  max-width: 65%;
+  object-fit: contain;
+  background: #ececec;
+  padding: 2rem;
+  margin: 0 2.5rem;
+}
+
+/* ── Training History section ── */
+.imgSection {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+.imgSectionHeader {
+  padding: 2.5rem 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.imgSectionNum {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #bbb;
+  text-transform: uppercase;
+}
+.imgSectionTitle {
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+.imgSectionDesc {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+  padding: 0 2.5rem 1.5rem;
+  max-width: 600px;
+  font-style: italic;
+}
+.imgSection img {
+  width: 100%;
+  display: block;
+  max-height: 520px;
+  object-fit: contain;
+  background: #ececec;
+  padding: 2rem 3rem;
+}
+
+/* ── ML Table ── */
+.tableSection {
+  padding: 3.5rem 2.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+.sectionLabel {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+.sectionTitle {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  margin-bottom: 0.7rem;
+}
+.sectionDesc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.75;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.tableWrapper {
+  width: 100%;
+}
+.modelTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'SF Mono', 'Courier New', monospace;
+}
+.modelTable thead th {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 16px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, sans-serif;
+}
+.modelTable tbody td {
+  font-size: 12px;
+  color: #444;
+  padding: 13px 16px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+  vertical-align: middle;
+}
+.layerName {
+  color: #111;
+  font-weight: 500;
+}
+.layerType {
+  color: #888;
+  font-size: 11px;
+  display: block;
+  margin-top: 2px;
+}
+.right {
+  text-align: right;
+}
+.summaryRow td {
+  background: rgba(0, 0, 0, 0.025);
+  font-weight: 600;
+  color: #111;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+}
+.summaryRow:last-child td {
+  border-bottom: none;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+}
+.statItem {
+  background: #f5f5f5;
+  padding: 2rem;
+}
+.statValue {
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  color: #111;
+  margin-bottom: 0.3rem;
+}
+.statLabel {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+/* ── App Walkthrough ── */
+.walkthroughSection {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+.walkthroughHeader {
+  padding: 3.5rem 2.5rem 2rem;
+}
+.walkLabel {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+.walkTitle {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  margin-bottom: 0.7rem;
+}
+.walkDesc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.75;
+  max-width: 560px;
+  font-style: italic;
+}
+
+.stepsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+.stepCard {
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+.stepPhone {
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  min-height: 420px;
+}
+.stepPhone img {
+  width: 75%;
+  max-width: 200px;
+  height: 360px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.stepBody {
+  padding: 1.5rem 1.5rem 2rem;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.08);
+}
+.stepNum {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #bbb;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  font-family: 'SF Mono', 'Courier New', monospace;
+}
+.stepTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.3px;
+  margin-bottom: 0.5rem;
+}
+.stepDesc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .stepsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .roleSection {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  .roleDesc {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .archImg {
+    max-width: 100%;
+    margin: 0 1.5rem;
+    padding: 1rem;
+  }
+  .archHeader,
+  .archDesc {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .tableSection {
+    padding: 2.5rem 1.5rem;
+  }
+  .tableWrapper {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .modelTable {
+    font-size: 10px;
+  }
+  .walkthroughHeader {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+  .imgSectionHeader,
+  .imgSectionDesc {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .projectOverview {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stepsRow {
+    grid-template-columns: 1fr;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stepPhone {
+    min-height: 260px;
+  }
+}
