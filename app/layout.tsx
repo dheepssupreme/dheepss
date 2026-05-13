@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
   title: 'dheepssupreme — Portfolio',
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

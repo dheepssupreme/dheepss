@@ -36,6 +36,26 @@
   color: #111;
   padding: 4px;
 }
+.langSwitch {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s ease;
+  margin-right: 12px;
+}
+.langSwitch:hover {
+  color: #111;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.navRight {
+  display: flex;
+  align-items: center;
+}
 .navLinks {
   display: flex;
   gap: 2rem;

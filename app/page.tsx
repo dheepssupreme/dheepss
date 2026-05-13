@@ -1,13 +1,18 @@
+"use client";
+
 import Image from 'next/image';
 import styles from './page.module.css';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Photography() {
+  const { t } = useLanguage();
+
   return (
     <>
       <section className="hero">
-        <p className="hero-label">Photography</p>
-        <h1 className="hero-title">Through<br />the lens,<br />my world.</h1>
-        <p className="hero-sub">I shoot what catches me off guard — stillness, light, and small things most people walk past. These are nine of those moments.</p>
+        <p className="hero-label">{t.photography.heroLabel}</p>
+        <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: t.photography.heroTitle }}></h1>
+        <p className="hero-sub">{t.photography.heroSub}</p>
       </section>
 
       <div className="divider"></div>
@@ -19,8 +24,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>01 — Portrait</p>
-          <h2 className={styles.photoTitle}>"Still"</h2>
-          <p className={styles.photoStory}>Some moments don't need color to feel real. This was one of those nights — quiet, unposed, just me and the lens.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.stillTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.stillStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Sony ILCE-7M2</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>LENS <span>50mm f/1.8</span></p>
@@ -36,8 +41,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>02 — Astrophotography</p>
-          <h2 className={styles.photoTitle}>"Breathing Fire,<br />Wearing Stars"</h2>
-          <p className={styles.photoStory}>Sinabung never sleeps. I pointed my camera up and realized the sky was just as restless.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.astroTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.astroStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Samsung Galaxy S24 FE</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>LENS <span>23mm f/1.8</span></p>
@@ -53,8 +58,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>03 — Macro / Nature</p>
-          <h2 className={styles.photoTitle}>"Found in<br />the Ordinary"</h2>
-          <p className={styles.photoStory}>This flower grows in water no one looks at twice. I did.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.natureTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.natureStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Apple iPhone X</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>LENS <span>23mm f/1.8</span></p>
@@ -69,8 +74,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>04 — Street / Candid</p>
-          <h2 className={styles.photoTitle}>"Unbothered"</h2>
-          <p className={styles.photoStory}>He saw me. He didn't care. I took the shot anyway.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.streetTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.streetStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Apple iPhone X</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>LENS <span>28mm f/1.8</span></p>
@@ -86,8 +91,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>05 — Macro</p>
-          <h2 className={styles.photoTitle}>"Alien"</h2>
-          <p className={styles.photoStory}>The closer you look, the stranger the world gets.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.macroTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.macroStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Apple iPhone X</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>LENS <span>28mm f/1.8</span></p>
@@ -102,8 +107,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>06 — Portrait / Animal</p>
-          <h2 className={styles.photoTitle}>"New Here"</h2>
-          <p className={styles.photoStory}>Everything was still new to her. Eyes wide, curious, unafraid.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.animalTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.animalStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Apple iPhone X</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>LENS <span>28mm f/1.8</span></p>
@@ -119,8 +124,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>07 — Landscape / Night</p>
-          <h2 className={styles.photoTitle}>"Small"</h2>
-          <p className={styles.photoStory}>Standing in front of Sinabung at midnight made me feel exactly that.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.landscapeTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.landscapeStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Samsung Galaxy S24 FE</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>LENS <span>23mm f/1.8</span></p>
@@ -136,8 +141,8 @@ export default function Photography() {
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>08 — Landscape / Wildlife</p>
-          <h2 className={styles.photoTitle}>"Grounded"</h2>
-          <p className={styles.photoStory}>Out in the open field, nothing was in a hurry. Just a horse, the grass, and a sky that couldn't make up its mind.</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.horseTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.horseStory}</p>
           <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Samsung S21 FE</span></div>
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>RESOLUTION <span>4000 × 3000</span></p>
