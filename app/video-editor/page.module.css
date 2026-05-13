@@ -75,12 +75,14 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin: 0 auto;
 }
-.desktopFrame video {
+.desktopFrame video,
+.desktopFrame iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   background: #000;
+  border: none;
 }
 .videoCol:hover .desktopFrame {
   transform: translateY(-6px);

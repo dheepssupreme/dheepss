@@ -16,7 +16,7 @@ export default function About() {
 
       <div className="divider"></div>
 
-      <div className={styles.aboutContent}>
+      <div className={styles.aboutContent} style={{ paddingBottom: '1rem' }}>
         <div className={styles.profileSection}>
           <div className={styles.profileImageWrap}>
             <img src="/IMG_3956.JPEG" alt="Dheo Putranta Pandia" className={styles.profileImage} />
@@ -29,8 +29,62 @@ export default function About() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div className={styles.skillsSection}>
+      <div className="divider"></div>
+
+      {/* === RESUME SECTION (EDUCATION & EXPERIENCE) === */}
+      <section className={styles.resumeSection}>
+        <div className={styles.resumeHeader}>
+          <h3>{t.about.resumeLabel}</h3>
+        </div>
+        
+        <div className={styles.resumeList}>
+          {/* Pendidikan */}
+          <div className={styles.resumeItem}>
+            <div className={styles.resumeTime}>{t.about.resumeEduTime}</div>
+            <div className={styles.resumeContent}>
+              <div className={styles.resumeHeaderRow}>
+                <img src="/logo_unpri.png" alt="UNPRI Logo" className={styles.resumeLogo} />
+                <h4 className={styles.resumeInstitution}>{t.about.resumeEduTitle}</h4>
+              </div>
+              <p className={styles.resumeRole}>{t.about.resumeEduRole}</p>
+              <p className={styles.resumeDesc}>{t.about.resumeEduDesc}</p>
+            </div>
+          </div>
+          
+          {/* Infinity */}
+          <div className={styles.resumeItem}>
+            <div className={styles.resumeTime}>{t.about.resumeInfTime}</div>
+            <div className={styles.resumeContent}>
+              <div className={styles.resumeHeaderRow}>
+                <img src="/logo_infinity.jpg" alt="Infinity Logo" className={styles.resumeLogo} />
+                <h4 className={styles.resumeInstitution}>{t.about.resumeInfTitle}</h4>
+              </div>
+              <p className={styles.resumeRole}>{t.about.resumeInfRole}</p>
+              <p className={styles.resumeDesc}>{t.about.resumeInfDesc}</p>
+            </div>
+          </div>
+
+          {/* UNPRI ESPORT */}
+          <div className={styles.resumeItem}>
+            <div className={styles.resumeTime}>{t.about.resumeEspTime}</div>
+            <div className={styles.resumeContent}>
+              <div className={styles.resumeHeaderRow}>
+                <img src="/logo_unpri_esport.jpg" alt="UNPRI Esport Logo" className={styles.resumeLogo} />
+                <h4 className={styles.resumeInstitution}>{t.about.resumeEspTitle}</h4>
+              </div>
+              <p className={styles.resumeRole}>{t.about.resumeEspRole}</p>
+              <p className={styles.resumeDesc}>{t.about.resumeEspDesc}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider"></div>
+
+      <div className={styles.aboutContent} style={{ paddingTop: '4rem' }}>
+        <div className={styles.skillsSection} style={{ borderTop: 'none', paddingTop: 0 }}>
           <div className={styles.skillGroup}>
             <h3 className={styles.skillTitle}>{t.about.focusArea}</h3>
             <div className={styles.tags}>

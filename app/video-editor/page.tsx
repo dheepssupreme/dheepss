@@ -95,13 +95,13 @@ export default function VideoEditor() {
         </div>
       </div>
 
-      {/* ====== VIDEO 02: Workshop LLM (9:16 Portrait) ====== */}
-      <div className={styles.videoEntry}>
+      {/* ====== PODCAST 01: Lulusan Bangkit Academy (16:9 Landscape) ====== */}
+      <div className={`${styles.videoEntry} ${styles.landscape}`}>
         <div className={styles.videoInfoLeft}>
-          <p className={styles.videoNum}>02 — Event Documentation</p>
-          <h2 className={styles.videoTitle} dangerouslySetInnerHTML={{ __html: t.videoEditor.vid2Title }}></h2>
-          <p className={styles.videoArtist}>Workshop LLM for Everyone</p>
-          <p className={styles.videoStory}>{t.videoEditor.vid2Story}</p>
+          <p className={styles.videoNum}>02 — Podcast Series</p>
+          <h2 className={styles.videoTitle} dangerouslySetInnerHTML={{ __html: t.videoEditor.vidPodcast1Title }}></h2>
+          <p className={styles.videoArtist}>Bangkit Academy</p>
+          <p className={styles.videoStory}>{t.videoEditor.vidPodcast1Story}</p>
           
           <div className={styles.capcutBadge}>
             <CapCutIcon />
@@ -109,11 +109,61 @@ export default function VideoEditor() {
           </div>
 
           <div className={styles.videoTags}>
-            <span className={styles.tag}>9:16 RATIO</span>
-            <span className={styles.tag}>DYNAMIC CUTS</span>
-            <span className={styles.tag}>DOCUMENTATION</span>
+            <span className={styles.tag}>16:9 RATIO</span>
+            <span className={styles.tag}>CREATIVE DIRECTION</span>
+            <span className={styles.tag}>LONG FORM</span>
           </div>
         </div>
+
+        <div className={styles.videoCol}>
+          <div className={styles.desktopFrame}>
+            <iframe 
+              src="https://www.youtube.com/embed/wpZo0_i-gzA?si=BV3oPNocgr3fSrx6" 
+              title="YouTube video player" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      {/* ====== PODCAST 02: Mahasiswa Pengalaman Sendiri (16:9 Landscape) ====== */}
+      <div className={`${styles.videoEntry} ${styles.landscape}`}>
+        <div className={styles.videoInfoLeft}>
+          <p className={styles.videoNum}>03 — Podcast Series</p>
+          <h2 className={styles.videoTitle} dangerouslySetInnerHTML={{ __html: t.videoEditor.vidPodcast2Title }}></h2>
+          <p className={styles.videoArtist}>Mahasiswa Berpengalaman</p>
+          <p className={styles.videoStory}>{t.videoEditor.vidPodcast2Story}</p>
+          
+          <div className={styles.capcutBadge}>
+            <CapCutIcon />
+            <span>{t.videoEditor.badgeLabel}</span>
+          </div>
+
+          <div className={styles.videoTags}>
+            <span className={styles.tag}>16:9 RATIO</span>
+            <span className={styles.tag}>CREATIVE DIRECTION</span>
+            <span className={styles.tag}>LONG FORM</span>
+          </div>
+        </div>
+
+        <div className={styles.videoCol}>
+          <div className={styles.desktopFrame}>
+            <iframe 
+              src="https://www.youtube.com/embed/7XSNIjBoybQ?si=btUpZCUqSse-WYeE" 
+              title="YouTube video player" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      {/* ====== VIDEO 04: Workshop LLM (9:16 Portrait) ====== */}
+      <div className={`${styles.videoEntry} ${styles.reverse}`}>
+        <div className={styles.videoInfoLeft} style={{ background: '#f5f5f5' }}></div>
 
         <div className={styles.videoCol}>
           <div className={styles.mobileFrame}>
@@ -131,12 +181,44 @@ export default function VideoEditor() {
           </div>
         </div>
 
-        <div className={styles.videoInfoRight} style={{ background: '#f5f5f5' }}></div>
+        <div className={styles.videoInfoRight}>
+          <p className={styles.videoNum}>04 — Event Documentation</p>
+          <h2 className={styles.videoTitle} dangerouslySetInnerHTML={{ __html: t.videoEditor.vid2Title }}></h2>
+          <p className={styles.videoArtist}>Workshop LLM for Everyone</p>
+          <p className={styles.videoStory}>{t.videoEditor.vid2Story}</p>
+          
+          <div className={styles.capcutBadge}>
+            <CapCutIcon />
+            <span>{t.videoEditor.badgeLabel}</span>
+          </div>
+
+          <div className={styles.videoTags}>
+            <span className={styles.tag}>9:16 RATIO</span>
+            <span className={styles.tag}>DYNAMIC CUTS</span>
+            <span className={styles.tag}>DOCUMENTATION</span>
+          </div>
+        </div>
       </div>
 
-      {/* ====== VIDEO 03: Hack4ID Startup (9:16 Portrait) ====== */}
-      <div className={`${styles.videoEntry} ${styles.reverse}`}>
-        <div className={styles.videoInfoLeft} style={{ background: '#f5f5f5' }}></div>
+      {/* ====== VIDEO 05: Hack4ID Startup (9:16 Portrait) ====== */}
+      <div className={styles.videoEntry}>
+        <div className={styles.videoInfoLeft}>
+          <p className={styles.videoNum}>05 — Educational Reels</p>
+          <h2 className={styles.videoTitle} dangerouslySetInnerHTML={{ __html: t.videoEditor.vid3Title }}></h2>
+          <p className={styles.videoArtist}>Hack4ID</p>
+          <p className={styles.videoStory}>{t.videoEditor.vid3Story}</p>
+          
+          <div className={styles.capcutBadge}>
+            <CapCutIcon />
+            <span>{t.videoEditor.badgeLabel}</span>
+          </div>
+
+          <div className={styles.videoTags}>
+            <span className={styles.tag}>9:16 RATIO</span>
+            <span className={styles.tag}>FAST PACED</span>
+            <span className={styles.tag}>STARTUP</span>
+          </div>
+        </div>
 
         <div className={styles.videoCol}>
           <div className={styles.mobileFrame}>
@@ -153,24 +235,8 @@ export default function VideoEditor() {
             </div>
           </div>
         </div>
-
-        <div className={styles.videoInfoRight}>
-          <p className={styles.videoNum}>03 — Educational Reels</p>
-          <h2 className={styles.videoTitle} dangerouslySetInnerHTML={{ __html: t.videoEditor.vid3Title }}></h2>
-          <p className={styles.videoArtist}>Hack4ID</p>
-          <p className={styles.videoStory}>{t.videoEditor.vid3Story}</p>
-          
-          <div className={styles.capcutBadge}>
-            <CapCutIcon />
-            <span>{t.videoEditor.badgeLabel}</span>
-          </div>
-
-          <div className={styles.videoTags}>
-            <span className={styles.tag}>9:16 RATIO</span>
-            <span className={styles.tag}>FAST PACED</span>
-            <span className={styles.tag}>STARTUP</span>
-          </div>
-        </div>
+        
+        <div className={styles.videoInfoRight} style={{ background: '#f5f5f5' }}></div>
       </div>
     </>
   );
