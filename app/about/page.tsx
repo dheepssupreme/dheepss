@@ -2,6 +2,7 @@
 
 import styles from './page.module.css';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 export default function About() {
   const { t } = useLanguage();
@@ -111,6 +112,12 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="cta-container">
+        <Link href="/video-editor" className="cta-button">
+          {t.cta.nextVideoEditor} <span>{t.cta.arrow}</span>
+        </Link>
       </div>
     </>
   );

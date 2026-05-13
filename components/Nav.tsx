@@ -34,12 +34,12 @@ export default function Nav() {
         </div>
       </div>
       <div className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
-        <Link href="/" className={pathname === '/' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.photography}</Link>
-        <Link href="/editing" className={pathname === '/editing' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.editing}</Link>
-        <Link href="/video-editor" className={pathname === '/video-editor' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.videoEditor}</Link>
-        <Link href="/coding" className={pathname === '/coding' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.coding}</Link>
-        <Link href="/tiktok" className={pathname === '/tiktok' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.tiktok}</Link>
         <Link href="/about" className={pathname === '/about' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.about}</Link>
+        <Link href="/video-editor" className={pathname === '/video-editor' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.videoEditor}</Link>
+        <Link href="/editing" className={pathname === '/editing' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.editing}</Link>
+        <Link href="/photography" className={pathname === '/photography' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.photography}</Link>
+        <Link href="/tiktok" className={pathname === '/tiktok' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.tiktok}</Link>
+        <Link href="/coding" className={pathname === '/coding' ? styles.active : ''} onClick={() => setIsOpen(false)}>{t.nav.coding}</Link>
       </div>
     </nav>
   );

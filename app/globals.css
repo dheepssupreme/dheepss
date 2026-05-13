@@ -56,3 +56,33 @@ body {
     font-size: 14px;
   }
 }
+
+/* === CTA BUTTON === */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2.5rem 2rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background-color: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cta-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

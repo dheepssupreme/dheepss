@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import styles from './page.module.css';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 export default function TikTok() {
   const [playing, setPlaying] = useState<{ [key: number]: boolean }>({ 1: false, 2: false });
@@ -178,6 +179,12 @@ export default function TikTok() {
             <span className={styles.tag}>LYRIC TRANSLATION</span>
           </div>
         </div>
+      </div>
+
+      <div className="cta-container">
+        <Link href="/coding" className="cta-button">
+          {t.cta.nextCoding} <span>{t.cta.arrow}</span>
+        </Link>
       </div>
     </>
   );

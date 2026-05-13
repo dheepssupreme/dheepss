@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import styles from './page.module.css';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 export default function VideoEditor() {
   const [playing, setPlaying] = useState<{ [key: number]: boolean }>({ 1: false, 2: false, 3: false });
@@ -237,6 +238,12 @@ export default function VideoEditor() {
         </div>
         
         <div className={styles.videoInfoRight} style={{ background: '#f5f5f5' }}></div>
+      </div>
+
+      <div className="cta-container">
+        <Link href="/editing" className="cta-button">
+          {t.cta.nextPhotoEditor} <span>{t.cta.arrow}</span>
+        </Link>
       </div>
     </>
   );

@@ -135,6 +135,14 @@ export const dictionary = {
       vid3Title: '"Hack4ID Startup"',
       vid3Story: 'Video reels yang membahas ekosistem startup. Menggabungkan potongan grafis dan tempo cepat untuk menjaga audiens tetap fokus.',
       badgeLabel: 'CapCut Edit'
+    },
+    cta: {
+      nextVideoEditor: 'Lihat Portofolio: Video Editor',
+      nextPhotoEditor: 'Selanjutnya: Foto Editor',
+      nextPhotography: 'Selanjutnya: Fotografi',
+      nextTiktok: 'Selanjutnya: TikTok',
+      nextCoding: 'Selanjutnya: Coding',
+      arrow: '→'
     }
   },
   en: {
@@ -273,6 +281,14 @@ export const dictionary = {
       vid3Title: '"Hack4ID Startup"',
       vid3Story: 'A reels video discussing the startup ecosystem. Combining graphic cuts and fast pacing to keep audiences hooked.',
       badgeLabel: 'CapCut Edit'
+    },
+    cta: {
+      nextVideoEditor: 'View Portfolio: Video Editor',
+      nextPhotoEditor: 'Next: Photo Editor',
+      nextPhotography: 'Next: Photography',
+      nextTiktok: 'Next: TikTok',
+      nextCoding: 'Next: Coding',
+      arrow: '→'
     }
   }
 };

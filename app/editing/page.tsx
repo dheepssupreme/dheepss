@@ -2,6 +2,7 @@
 
 import styles from './page.module.css';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 export default function Editing() {
   const { t } = useLanguage();
@@ -141,6 +142,12 @@ export default function Editing() {
           <p className={styles.editStory}>{t.editing.edit6Story}</p>
           <div className={styles.toolBadge}><span className={styles.toolLabel}>Edited with</span><span className={styles.toolName}>Snapseed, Prequel</span></div>
         </div>
+      </div>
+
+      <div className="cta-container">
+        <Link href="/photography" className="cta-button">
+          {t.cta.nextPhotography} <span>{t.cta.arrow}</span>
+        </Link>
       </div>
     </>
   );
