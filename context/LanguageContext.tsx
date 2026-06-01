@@ -12,7 +12,7 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguageState] = useState<LanguageKey>('id');
+  const [language, setLanguageState] = useState<LanguageKey>('en');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // Prevent hydration mismatch by not rendering until mounted
   if (!isMounted) {
     return <>{children}</>; 
-    // Fallback during SSR (akan render dengan bahasa default, yaitu 'id')
+    // Fallback during SSR (akan render dengan bahasa default, yaitu 'en')
   }
 
   return (
@@ -48,7 +48,7 @@ export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
     // Return default values to prevent crash if not wrapped (optional, but good practice)
-    return { language: 'id' as LanguageKey, setLanguage: () => {}, t: dictionary['id'] };
+    return { language: 'en' as LanguageKey, setLanguage: () => {}, t: dictionary['en'] };
   }
   return context;
 };

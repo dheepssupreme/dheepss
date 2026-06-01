@@ -144,6 +144,30 @@ export default function Editing() {
         </div>
       </div>
 
+      {/* 07 Pink Flower Bee */}
+      <div className={styles.editEntry}>
+        <div className={styles.editImg}>
+          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_5020.JPG.jpeg" alt="Sweet Instant" />
+        </div>
+        <div className={styles.editInfo}>
+          <p className={styles.editNum}>07 — VSCO Edit</p>
+          <h2 className={styles.editTitle} dangerouslySetInnerHTML={{ __html: t.editing.edit7Title }}></h2>
+          <p className={styles.editStory}>{t.editing.edit7Story}</p>
+          <div className={styles.toolBadge}><span className={styles.toolLabel}>Edited with</span><span className={styles.toolName}>VSCO</span></div>
+          <div className={styles.editMeta}>
+            <p className={styles.presetName}>KX1 / Krochet Kids</p>
+            <div className={styles.presetParams}>
+              <span className={styles.param}>PRESET +12.0</span>
+              <span className={styles.param}>EXPOSURE +0.4</span>
+              <span className={styles.param}>SATURATION +0.8</span>
+              <span className={styles.param}>CONTRAST +1.4</span>
+              <span className={styles.param}>WB +0.0 -0.9</span>
+              <span className={styles.param}>SHARPEN +4.4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="cta-container">
         <Link href="/photography" className="cta-button">
           {t.cta.nextPhotography} <span>{t.cta.arrow}</span>

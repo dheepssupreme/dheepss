@@ -14,7 +14,7 @@ export const dictionary = {
     photography: {
       heroLabel: 'Fotografi',
       heroTitle: 'Melalui<br />lensa,<br />duniaku.',
-      heroSub: 'Saya memotret hal-hal yang sering terlewatkan — ketenangan, cahaya, dan hal-hal kecil yang tidak diperhatikan orang. Ini adalah sembilan momen di antaranya.',
+      heroSub: 'Saya memotret hal-hal yang sering terlewatkan — ketenangan, cahaya, dan hal-hal kecil yang tidak diperhatikan orang. Ini adalah sepuluh momen di antaranya.',
       stillTitle: '"Hening"',
       stillStory: 'Beberapa momen tidak butuh warna agar terasa nyata. Ini adalah salah satu malam itu — sepi, tanpa gaya, hanya saya and lensa.',
       astroTitle: '"Bernapas Api,<br />Mengenakan Bintang"',
@@ -30,7 +30,11 @@ export const dictionary = {
       landscapeTitle: '"Kecil"',
       landscapeStory: 'Berdiri di depan Gunung Sinabung tengah malam benar-benar membuatku merasa sekecil itu.',
       horseTitle: '"Membumi"',
-      horseStory: 'Di padang rumput terbuka, tak ada yang terburu-buru. Hanya seekor kuda, rerumputan, dan langit yang sulit ditebak.'
+      horseStory: 'Di padang rumput terbuka, tak ada yang terburu-buru. Hanya seekor kuda, rerumputan, dan langit yang sulit ditebak.',
+      yellowBeeTitle: '"Emas yang Hidup"',
+      yellowBeeStory: 'Warna kuning cerah kelopak bunga liar ini menarik perhatian yang tak terduga. Diambil dari jarak sangat dekat, menampilkan detail lebah madu yang sedang mengumpulkan nektar dalam harmoni alam yang tenang.',
+      pinkBeeTitle: '"Simfoni Kelopak"',
+      pinkBeeStory: 'Kelopak merah muda yang lembut membuka jalan bagi penyerbuk mungil ini. Kontras warna alami antara merah muda, kuning, dan pola bergaris lebah menciptakan ketenangan visual yang sempurna.'
     },
     about: {
       heroLabel: 'Tentang',
@@ -92,7 +96,7 @@ export const dictionary = {
     editing: {
       heroLabel: 'Visual Editing',
       heroTitle: 'Dunia yang sama,<br />perasaan yang<br />berbeda.',
-      heroSub: 'Editing bukan sekadar memperbaiki foto — ini tentang menentukan emosi apa yang harus disampaikannya. Ini adalah enam eksperimen dalam mood, nada warna, dan niat.',
+      heroSub: 'Editing bukan sekadar memperbaiki foto — ini tentang menentukan emosi apa yang harus disampaikannya. Ini adalah tujuh eksperimen dalam mood, nada warna, dan niat.',
       vscoLabel: 'Lihat di',
       edit1Title: '"Di Antara Garis"',
       edit1Story: 'Saya melihat ke atas dan menemukan struktur ketika orang lain hanya melihat langit. Menghilangkan warna, mempertahankan ketegangannya.',
@@ -105,7 +109,9 @@ export const dictionary = {
       edit5Title: '"Perasaan<br />Terlalu Terang"',
       edit5Story: 'Langitnya memang sudah terbakar. Saya hanya memastikan editannya cocok dengan suasana hatiku saat itu.',
       edit6Title: '"Cumulus"',
-      edit6Story: 'Awan bergerak cepat, golden hour memudar. Saya melambatkan semuanya saat mengedit.'
+      edit6Story: 'Awan bergerak cepat, golden hour memudar. Saya melambatkan semuanya saat mengedit.',
+      edit7Title: '"Detik Manis"',
+      edit7Story: 'Ada keindahan di tengah kesibukan kecil. Menangkap detail lebah yang mendarat di kelopak bunga merah muda ini, diedit dengan KX1 untuk menonjolkan warna hangat dan detail yang tajam.'
     },
     tiktok: {
       heroLabel: 'TikTok',
@@ -160,7 +166,7 @@ export const dictionary = {
     photography: {
       heroLabel: 'Photography',
       heroTitle: 'Through<br />the lens,<br />my world.',
-      heroSub: 'I shoot what catches me off guard — stillness, light, and small things most people walk past. These are nine of those moments.',
+      heroSub: 'I shoot what catches me off guard — stillness, light, and small things most people walk past. These are ten of those moments.',
       stillTitle: '"Still"',
       stillStory: 'Some moments don\'t need color to feel real. This was one of those nights — quiet, unposed, just me and the lens.',
       astroTitle: '"Breathing Fire,<br />Wearing Stars"',
@@ -176,7 +182,11 @@ export const dictionary = {
       landscapeTitle: '"Small"',
       landscapeStory: 'Standing in front of Sinabung at midnight made me feel exactly that.',
       horseTitle: '"Grounded"',
-      horseStory: 'Out in the open field, nothing was in a hurry. Just a horse, the grass, and a sky that couldn\'t make up its mind.'
+      horseStory: 'Out in the open field, nothing was in a hurry. Just a horse, the grass, and a sky that couldn\'t make up its mind.',
+      yellowBeeTitle: '"Living Gold"',
+      yellowBeeStory: 'The vibrant yellow petals of this wild flower attracted an unexpected visitor. Shot at close range, showcasing the intricate details of a honeybee collecting nectar in quiet natural harmony.',
+      pinkBeeTitle: '"Petal Symphony"',
+      pinkBeeStory: 'Soft pink petals pave the way for this tiny pollinator. The natural color contrast between the pink background, yellow center, and the striped bee creates perfect visual tranquility.'
     },
     about: {
       heroLabel: 'About',
@@ -238,7 +248,7 @@ export const dictionary = {
     editing: {
       heroLabel: 'Visual Editing',
       heroTitle: 'Same world,<br />different<br />feeling.',
-      heroSub: 'Editing isn\'t about fixing a photo — it\'s about deciding what emotion it should carry. These are six experiments in mood, tone, and intention.',
+      heroSub: 'Editing isn\'t about fixing a photo — it\'s about deciding what emotion it should carry. These are seven experiments in mood, tone, and intention.',
       vscoLabel: 'View on',
       edit1Title: '"Between Lines"',
       edit1Story: 'I looked up and saw structure where others saw sky. Stripped the color, kept the tension.',
@@ -251,7 +261,9 @@ export const dictionary = {
       edit5Title: '"Overexposed<br />Feelings"',
       edit5Story: 'The sky was already on fire. I just made sure the edit matched the mood I was in.',
       edit6Title: '"Cumulus"',
-      edit6Story: 'Clouds moving fast, golden hour fading. I slowed everything down in post.'
+      edit6Story: 'Clouds moving fast, golden hour fading. I slowed everything down in post.',
+      edit7Title: '"Sweet Instant"',
+      edit7Story: 'There is beauty in the smallest of movements. Capturing a bee landing on a vibrant pink petal, edited with KX1 to bring out the warm tones and crisp details.'
     },
     tiktok: {
       heroLabel: 'TikTok',

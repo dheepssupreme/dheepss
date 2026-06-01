@@ -114,11 +114,11 @@ export default function About() {
         </div>
       </div>
 
-      <div className="cta-container">
+      {/* <div className="cta-container">
         <Link href="/video-editor" className="cta-button">
           {t.cta.nextVideoEditor} <span>{t.cta.arrow}</span>
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }

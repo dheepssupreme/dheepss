@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import Link from 'next/link';
+import HEICImage from '@/components/HEICImage';
 
 export default function Photography() {
   const { t } = useLanguage();
@@ -148,6 +149,32 @@ export default function Photography() {
           <div className={styles.photoMeta}>
             <p className={styles.photoMetaItem}>RESOLUTION <span>4000 × 3000</span></p>
           </div>
+        </div>
+      </div>
+
+      {/* 09 Yellow Flower Bee */}
+      <div className={styles.photoEntry}>
+        <div className={styles.photoImg}>
+          <HEICImage src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4724.HEIC" alt="Living Gold" />
+        </div>
+        <div className={styles.photoInfo}>
+          <p className={styles.photoNum}>09 — Macro / Wildlife</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.yellowBeeTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.yellowBeeStory}</p>
+          <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Apple iPhone</span></div>
+        </div>
+      </div>
+
+      {/* 10 Pink Flower Bee */}
+      <div className={`${styles.photoEntry} ${styles.reverse}`}>
+        <div className={styles.photoImg}>
+          <HEICImage src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4739.HEIC" alt="Petal Symphony" />
+        </div>
+        <div className={styles.photoInfo}>
+          <p className={styles.photoNum}>10 — Macro / Nature</p>
+          <h2 className={styles.photoTitle} dangerouslySetInnerHTML={{ __html: t.photography.pinkBeeTitle }}></h2>
+          <p className={styles.photoStory}>{t.photography.pinkBeeStory}</p>
+          <div className={styles.shotOn}><span className={styles.shotOnLabel}>Shot on</span><span className={styles.shotOnDevice}>Apple iPhone</span></div>
         </div>
       </div>
 
