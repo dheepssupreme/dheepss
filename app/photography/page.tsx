@@ -1,9 +1,9 @@
 "use client";
 
-import Image from 'next/image';
 import styles from './page.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import Link from 'next/link';
+import LazyImage from '@/components/LazyImage';
 import HEICImage from '@/components/HEICImage';
 
 export default function Photography() {
@@ -22,7 +22,11 @@ export default function Photography() {
       {/* 01 B&W Portrait */}
       <div className={styles.photoEntry}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4498.JPEG" alt="Still" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4498.JPEG"
+            alt="Still"
+            aspectRatio="3/4"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>01 — Portrait</p>
@@ -39,7 +43,11 @@ export default function Photography() {
       {/* 02 Volcano Milky Way */}
       <div className={`${styles.photoEntry} ${styles.reverse}`}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4494.JPEG" alt="Breathing Fire, Wearing Stars" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4494.JPEG"
+            alt="Breathing Fire, Wearing Stars"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>02 — Astrophotography</p>
@@ -56,7 +64,11 @@ export default function Photography() {
       {/* 03 Water Hyacinth */}
       <div className={styles.photoEntry}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4499.JPEG" alt="Found in the Ordinary" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4499.JPEG"
+            alt="Found in the Ordinary"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>03 — Macro / Nature</p>
@@ -72,7 +84,11 @@ export default function Photography() {
       {/* 04 Orange Cat */}
       <div className={`${styles.photoEntry} ${styles.reverse}`}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4500.JPEG" alt="Unbothered" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4500.JPEG"
+            alt="Unbothered"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>04 — Street / Candid</p>
@@ -89,7 +105,11 @@ export default function Photography() {
       {/* 05 Dragonfly */}
       <div className={styles.photoEntry}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4497.JPEG" alt="Alien" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4497.JPEG"
+            alt="Alien"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>05 — Macro</p>
@@ -105,7 +125,11 @@ export default function Photography() {
       {/* 06 Kitten */}
       <div className={`${styles.photoEntry} ${styles.reverse}`}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4501.JPEG" alt="New Here" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4501.JPEG"
+            alt="New Here"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>06 — Portrait / Animal</p>
@@ -122,7 +146,11 @@ export default function Photography() {
       {/* 07 Volcano with Person */}
       <div className={styles.photoEntry}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4495.JPEG" alt="Small" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4495.JPEG"
+            alt="Small"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>07 — Landscape / Night</p>
@@ -139,7 +167,11 @@ export default function Photography() {
       {/* 08 Horse */}
       <div className={`${styles.photoEntry} ${styles.reverse}`}>
         <div className={styles.photoImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/img%20kuda.jpeg" alt="Grounded" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/img%20kuda.jpeg"
+            alt="Grounded"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>08 — Landscape / Wildlife</p>
@@ -155,7 +187,11 @@ export default function Photography() {
       {/* 09 Yellow Flower Bee */}
       <div className={styles.photoEntry}>
         <div className={styles.photoImg}>
-          <HEICImage src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4724.HEIC" alt="Living Gold" />
+          <HEICImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4724.HEIC"
+            alt="Living Gold"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>09 — Macro / Wildlife</p>
@@ -168,7 +204,11 @@ export default function Photography() {
       {/* 10 Pink Flower Bee */}
       <div className={`${styles.photoEntry} ${styles.reverse}`}>
         <div className={styles.photoImg}>
-          <HEICImage src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4739.HEIC" alt="Petal Symphony" />
+          <HEICImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4739.HEIC"
+            alt="Petal Symphony"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.photoInfo}>
           <p className={styles.photoNum}>10 — Macro / Nature</p>

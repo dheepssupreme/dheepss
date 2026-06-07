@@ -3,6 +3,7 @@
 import styles from './page.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import Link from 'next/link';
+import LazyImage from '@/components/LazyImage';
 
 export default function Editing() {
   const { t } = useLanguage();
@@ -28,7 +29,11 @@ export default function Editing() {
       {/* 01 Bars / Sky B&W */}
       <div className={styles.editEntry}>
         <div className={styles.editImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4502.JPEG" alt="Between Lines" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4502.JPEG"
+            alt="Between Lines"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.editInfo}>
           <p className={styles.editNum}>01 — VSCO Edit</p>
@@ -50,7 +55,11 @@ export default function Editing() {
       {/* 02 Butterfly */}
       <div className={`${styles.editEntry} ${styles.reverse}`}>
         <div className={styles.editImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4194.JPEG" alt="Electric, Amplified" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4194.JPEG"
+            alt="Electric, Amplified"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.editInfo}>
           <p className={styles.editNum}>02 — VSCO Edit</p>
@@ -74,7 +83,11 @@ export default function Editing() {
       {/* 03 White Flower */}
       <div className={styles.editEntry}>
         <div className={styles.editImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4109.JPEG" alt="Soft Proof" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4109.JPEG"
+            alt="Soft Proof"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.editInfo}>
           <p className={styles.editNum}>03 — VSCO Edit</p>
@@ -99,7 +112,11 @@ export default function Editing() {
       {/* 04 Street Lamp B&W */}
       <div className={`${styles.editEntry} ${styles.reverse}`}>
         <div className={styles.editImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_0643.JPEG" alt="Infrastructure" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_0643.JPEG"
+            alt="Infrastructure"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.editInfo}>
           <p className={styles.editNum}>04 — VSCO Edit</p>
@@ -121,7 +138,11 @@ export default function Editing() {
       {/* 05 Sunset Dramatic */}
       <div className={styles.editEntry}>
         <div className={styles.editImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/editnovsco2.jpeg" alt="Overexposed Feelings" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/editnovsco2.jpeg"
+            alt="Overexposed Feelings"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.editInfo}>
           <p className={styles.editNum}>05 — Prequel Edit</p>
@@ -134,7 +155,11 @@ export default function Editing() {
       {/* 06 Cloud Golden */}
       <div className={`${styles.editEntry} ${styles.reverse}`}>
         <div className={styles.editImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/editnovsco1.jpeg" alt="Cumulus" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/editnovsco1.jpeg"
+            alt="Cumulus"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.editInfo}>
           <p className={styles.editNum}>06 — Snapseed Edit</p>
@@ -147,7 +172,11 @@ export default function Editing() {
       {/* 07 Pink Flower Bee */}
       <div className={styles.editEntry}>
         <div className={styles.editImg}>
-          <img src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_5020.JPG.jpeg" alt="Sweet Instant" />
+          <LazyImage
+            src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_5020.JPG.jpeg"
+            alt="Sweet Instant"
+            aspectRatio="4/3"
+          />
         </div>
         <div className={styles.editInfo}>
           <p className={styles.editNum}>07 — VSCO Edit</p>

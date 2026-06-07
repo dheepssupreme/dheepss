@@ -1,17 +1,53 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface HEICImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
+  aspectRatio?: string;
 }
 
-export default function HEICImage({ src, alt, className, ...props }: HEICImageProps) {
+/**
+ * HEICImage — loading HEIC dari Supabase dengan:
+ * 1. Intersection Observer: konversi HEIC hanya dimulai saat gambar mendekati viewport
+ *    → Tidak semua HEIC di-fetch sekaligus; ini mengurangi memory & CPU burst
+ * 2. Skeleton shimmer: UX yang bersih tanpa teks "Converting..." yang mengganggu
+ * 3. Blur-to-sharp reveal: gambar muncul halus setelah konversi selesai
+ * 4. Cleanup objectURL: mencegah memory leak
+ *
+ * Catatan performa: HEIC conversion di client SELALU berat (fetch + decode + encode).
+ * Solusi terbaik jangka panjang adalah konversi di server (misal via Supabase Transform).
+ * Komponen ini meminimalisir dampaknya di client.
+ */
+export default function HEICImage({ src, alt, className, aspectRatio = "4/3", style, ...props }: HEICImageProps) {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false); // false dulu, mulai saat masuk viewport
   const [error, setError] = useState<string | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const hasStarted = useRef(false);
 
+  // Intersection Observer: mulai fetch+convert hanya saat gambar mendekati viewport
   useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted.current) {
+          hasStarted.current = true;
+          observer.disconnect();
+          startConversion();
+        }
+      },
+      { rootMargin: '300px 0px' } // mulai convert 300px sebelum masuk viewport
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [src]);
+
+  function startConversion() {
     let active = true;
     let objectUrl: string | null = null;
 
@@ -20,31 +56,25 @@ export default function HEICImage({ src, alt, className, ...props }: HEICImagePr
         setLoading(true);
         setError(null);
 
-        // Fetch HEIC file as blob
         const res = await fetch(src);
-        if (!res.ok) throw new Error("Failed to fetch image");
+        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
         const blob = await res.blob();
-
         if (!active) return;
 
-        // Dynamically load heic2any to avoid blocking initial load/SSR
+        // Dynamic import agar tidak masuk initial bundle
         const heic2anyModule = await import('heic2any');
         const heic2any = heic2anyModule.default;
-
         if (!active) return;
 
-        // Convert HEIC blob to JPEG
         const conversionResult = await heic2any({
           blob,
           toType: 'image/jpeg',
-          quality: 0.8,
+          quality: 0.82,
         });
-
         if (!active) return;
 
         const resultBlob = Array.isArray(conversionResult) ? conversionResult[0] : conversionResult;
         objectUrl = URL.createObjectURL(resultBlob);
-        
         setImgSrc(objectUrl);
         setLoading(false);
       } catch (err: any) {
@@ -60,89 +90,96 @@ export default function HEICImage({ src, alt, className, ...props }: HEICImagePr
 
     return () => {
       active = false;
-      if (objectUrl) {
-        URL.revokeObjectURL(objectUrl);
-      }
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
     };
-  }, [src]);
+  }
 
-  if (loading) {
-    return (
-      <div 
+  const showSkeleton = !imgSrc && !error;
+
+  return (
+    <div
+      ref={containerRef}
+      style={{
+        position: 'relative',
+        width: '100%',
+        aspectRatio,
+        overflow: 'hidden',
+        borderRadius: 'inherit',
+        ...style,
+      }}
+    >
+      {/* Skeleton shimmer — tampil saat belum masuk viewport ATAU sedang convert */}
+      <div
         style={{
-          width: '100%',
-          height: '100%',
-          minHeight: '400px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'linear-gradient(90deg, #18181b 25%, #27272a 50%, #18181b 75%)',
+          position: 'absolute',
+          inset: 0,
+          background: loading
+            ? 'linear-gradient(90deg, #e0e0e0 25%, #ebebeb 50%, #e0e0e0 75%)'
+            : '#ebebeb',
           backgroundSize: '200% 100%',
-          animation: 'shimmer 1.5s infinite linear',
-          color: '#a1a1aa',
-          fontFamily: 'inherit',
-          gap: '0.75rem',
-          borderRadius: '12px'
+          animation: loading ? 'heicShimmer 1.6s ease-in-out infinite' : 'none',
+          opacity: showSkeleton ? 1 : 0,
+          transition: 'opacity 0.4s ease',
+          borderRadius: 'inherit',
+          zIndex: 1,
         }}
-      >
-        <svg 
-          style={{ animation: 'spin 1s infinite linear' }}
-          width="24" 
-          height="24" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
-          strokeWidth="2"
+      />
+
+      {/* Error state */}
+      {error && (
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: '#f5f5f5',
+            color: '#999',
+            fontSize: '13px',
+            gap: '0.4rem',
+            zIndex: 2,
+          }}
         >
-          <line x1="12" y1="2" x2="12" y2="6"></line>
-          <line x1="12" y1="18" x2="12" y2="22"></line>
-          <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
-          <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
-          <line x1="2" y1="12" x2="6" y2="12"></line>
-          <line x1="18" y1="12" x2="22" y2="12"></line>
-          <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
-          <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
-        </svg>
-        <span style={{ fontSize: '0.875rem', opacity: 0.8 }}>Converting HEIC to JPEG...</span>
-        <style>{`
-          @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-          }
-          @keyframes spin {
-            100% { transform: rotate(360deg); }
-          }
-        `}</style>
-      </div>
-    );
-  }
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <span>Unable to load image</span>
+        </div>
+      )}
 
-  if (error) {
-    return (
-      <div 
-        style={{
-          width: '100%',
-          height: '100%',
-          minHeight: '400px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: '#27272a',
-          color: '#ef4444',
-          borderRadius: '12px',
-          padding: '1rem',
-          textAlign: 'center'
-        }}
-      >
-        <span style={{ fontWeight: 600 }}>Error loading HEIC image</span>
-        <span style={{ fontSize: '0.875rem', opacity: 0.7, marginTop: '0.25rem' }}>{error}</span>
-      </div>
-    );
-  }
+      {/* Gambar hasil konversi */}
+      {imgSrc && (
+        <img
+          src={imgSrc}
+          alt={alt}
+          className={className}
+          onLoad={() => setIsLoaded(true)}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: isLoaded ? 1 : 0,
+            filter: isLoaded ? 'blur(0px)' : 'blur(6px)',
+            transform: isLoaded ? 'scale(1)' : 'scale(1.02)',
+            transition: 'opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease',
+            zIndex: 2,
+          }}
+          {...props}
+        />
+      )}
 
-  if (!imgSrc) return null;
-
-  return <img src={imgSrc} alt={alt} className={className} {...props} />;
+      <style>{`
+        @keyframes heicShimmer {
+          0%   { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+      `}</style>
+    </div>
+  );
 }
