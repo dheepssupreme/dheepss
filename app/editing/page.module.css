@@ -40,7 +40,7 @@
 
 .editImg {
   overflow: hidden;
-  background: #e8e8e8;
+  background: #111;
   /* Height dikontrol oleh LazyImage via aspect-ratio */
   min-height: 300px;
 }

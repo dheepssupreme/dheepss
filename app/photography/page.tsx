@@ -26,6 +26,7 @@ export default function Photography() {
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4498.JPEG"
             alt="Still"
             aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -46,7 +47,8 @@ export default function Photography() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4494.JPEG"
             alt="Breathing Fire, Wearing Stars"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -67,7 +69,8 @@ export default function Photography() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4499.JPEG"
             alt="Found in the Ordinary"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -87,7 +90,8 @@ export default function Photography() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4500.JPEG"
             alt="Unbothered"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -108,7 +112,8 @@ export default function Photography() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4497.JPEG"
             alt="Alien"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -128,7 +133,8 @@ export default function Photography() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4501.JPEG"
             alt="New Here"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -149,7 +155,8 @@ export default function Photography() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/IMG_4495.JPEG"
             alt="Small"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -170,7 +177,8 @@ export default function Photography() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/img%20kuda.jpeg"
             alt="Grounded"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -190,7 +198,8 @@ export default function Photography() {
           <HEICImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4724.HEIC"
             alt="Living Gold"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>
@@ -207,7 +216,8 @@ export default function Photography() {
           <HEICImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4739.HEIC"
             alt="Petal Symphony"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.photoInfo}>

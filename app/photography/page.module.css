@@ -14,7 +14,7 @@
 
 .photoImg {
   overflow: hidden;
-  background: #e0e0e0;
+  background: #111;
   /* Height dikontrol oleh LazyImage/HEICImage via aspect-ratio */
   min-height: 300px;
 }

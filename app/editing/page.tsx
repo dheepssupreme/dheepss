@@ -32,7 +32,8 @@ export default function Editing() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4502.JPEG"
             alt="Between Lines"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.editInfo}>
@@ -58,7 +59,8 @@ export default function Editing() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4194.JPEG"
             alt="Electric, Amplified"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.editInfo}>
@@ -86,7 +88,8 @@ export default function Editing() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_4109.JPEG"
             alt="Soft Proof"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.editInfo}>
@@ -115,7 +118,8 @@ export default function Editing() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_0643.JPEG"
             alt="Infrastructure"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.editInfo}>
@@ -141,7 +145,8 @@ export default function Editing() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/editnovsco2.jpeg"
             alt="Overexposed Feelings"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.editInfo}>
@@ -158,7 +163,8 @@ export default function Editing() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/editnovsco1.jpeg"
             alt="Cumulus"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.editInfo}>
@@ -175,7 +181,8 @@ export default function Editing() {
           <LazyImage
             src="https://zzrpfpbtrkfwnfmoaxdn.supabase.co/storage/v1/object/public/portofolio/edit/IMG_5020.JPG.jpeg"
             alt="Sweet Instant"
-            aspectRatio="4/3"
+            aspectRatio="3/4"
+            objectFit="contain"
           />
         </div>
         <div className={styles.editInfo}>

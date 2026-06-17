@@ -11,6 +11,13 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
    * Default: "4/3"
    */
   aspectRatio?: string;
+  /**
+   * Object-fit mode:
+   * - 'cover': gambar mengisi penuh container (bisa terpotong/crop)
+   * - 'contain': seluruh gambar terlihat (ada letterbox/pillarbox)
+   * Default: 'cover'
+   */
+  objectFit?: 'cover' | 'contain';
 }
 
 /**
@@ -23,7 +30,7 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
  *  → loading="lazy" native sudah bagus, tapi kita mau kontrol penuh atas
  *    skeleton animasi & transisi blur agar UX terasa premium.
  */
-export default function LazyImage({ src, alt, className, aspectRatio = "4/3", style, ...props }: LazyImageProps) {
+export default function LazyImage({ src, alt, className, aspectRatio = "4/3", objectFit = "cover", style, ...props }: LazyImageProps) {
   const [isInView, setIsInView] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -64,7 +71,7 @@ export default function LazyImage({ src, alt, className, aspectRatio = "4/3", st
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(90deg, #e8e8e8 25%, #f0f0f0 50%, #e8e8e8 75%)',
+          background: 'linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%)',
           backgroundSize: '200% 100%',
           animation: 'lazyImgShimmer 1.6s ease-in-out infinite',
           opacity: isLoaded ? 0 : 1,
@@ -87,7 +94,7 @@ export default function LazyImage({ src, alt, className, aspectRatio = "4/3", st
             inset: 0,
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
+            objectFit,
             opacity: isLoaded ? 1 : 0,
             filter: isLoaded ? 'blur(0px)' : 'blur(8px)',
             transform: isLoaded ? 'scale(1)' : 'scale(1.02)',

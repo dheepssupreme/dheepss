@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 interface HEICImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   aspectRatio?: string;
+  objectFit?: 'cover' | 'contain';
 }
 
 /**
@@ -19,7 +20,7 @@ interface HEICImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
  * Solusi terbaik jangka panjang adalah konversi di server (misal via Supabase Transform).
  * Komponen ini meminimalisir dampaknya di client.
  */
-export default function HEICImage({ src, alt, className, aspectRatio = "4/3", style, ...props }: HEICImageProps) {
+export default function HEICImage({ src, alt, className, aspectRatio = "4/3", objectFit = "cover", style, ...props }: HEICImageProps) {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   const [loading, setLoading] = useState(false); // false dulu, mulai saat masuk viewport
   const [error, setError] = useState<string | null>(null);
@@ -114,8 +115,8 @@ export default function HEICImage({ src, alt, className, aspectRatio = "4/3", st
           position: 'absolute',
           inset: 0,
           background: loading
-            ? 'linear-gradient(90deg, #e0e0e0 25%, #ebebeb 50%, #e0e0e0 75%)'
-            : '#ebebeb',
+            ? 'linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%)'
+            : '#1a1a1a',
           backgroundSize: '200% 100%',
           animation: loading ? 'heicShimmer 1.6s ease-in-out infinite' : 'none',
           opacity: showSkeleton ? 1 : 0,
@@ -163,7 +164,7 @@ export default function HEICImage({ src, alt, className, aspectRatio = "4/3", st
             inset: 0,
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
+            objectFit,
             opacity: isLoaded ? 1 : 0,
             filter: isLoaded ? 'blur(0px)' : 'blur(6px)',
             transform: isLoaded ? 'scale(1)' : 'scale(1.02)',
